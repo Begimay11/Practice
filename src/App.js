@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Expenses from './components/expenses/Expenses';
+import NewExpenses from './components/newExpenses/NewExpenses';
+
+const data = [
+  {
+    title: 'alma',
+    price: 30
+  },
+  {
+    title: 'banan',
+    price: 30
+  },
+  {
+    title: 'abricos',
+    price: 30
+  },
+  {
+    title: 'shabdaly',
+    price: 30
+  },
+]
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <NewExpenses/>
+     {data.map((el)=> {
+      //  return <Expenses title = {el.title} price={el.price}/>
+     })}
+     {/* <Expenses data={data}/> */}
     </div>
   );
 }
